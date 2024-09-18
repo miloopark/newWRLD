@@ -1,0 +1,84 @@
+.finder-window {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  position: relative;
+  user-select: none;
+  scale: 95%;
+}
+
+.finder-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #e4e4e4;
+}
+
+.finder-controls {
+  display: flex;
+  margin-right: auto;
+}
+
+.control-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.close {
+  background-color: #ff5f57;
+}
+
+.minimize {
+  background-color: #ffbd2e;
+}
+
+.maximize {
+  background-color: #28c840;
+}
+
+.finder-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.finder-sidebar {
+  width: 200px;
+  background-color: #f5f5f5;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.finder-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.finder-sidebar li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.finder-sidebar li.active {
+  background-color: #dcdcdc;
+  border-radius: 5px;
+}
+
+.finder-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+.scrollable-content {
+  height: 100%;
+}
