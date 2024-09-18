@@ -1,0 +1,75 @@
+.contact-container {
+  max-width: 500px; /* Set a maximum width for the form */
+  margin: 50px auto; /* Center the form on the page */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px; /* Slightly rounder corners */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow for a subtle depth effect */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increase space between input elements for better readability */
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.input-box {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+  border-radius: 4px; /* Smooth, rounded corners */
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.input-box:focus {
+  border-color: #007aff; /* Blue outline on focus */
+  box-shadow: 0 0 5px rgba(0, 122, 255, 0.3); /* Subtle blue shadow on focus */
+}
+
+.input-box-full {
+  width: 95%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.input-box-full:focus {
+  border-color: #007aff; /* Blue outline on focus */
+  box-shadow: 0 0 5px rgba(0, 122, 255, 0.3); /* Subtle blue shadow on focus */
+}
+
+.send-button {
+  padding: 12px;
+  border: none;
+  background-color: #000;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Align the button to the left */
+}
+
+.send-button:hover {
+  background-color: #333;
+}
+
+.send-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}

@@ -1,0 +1,34 @@
+.recents-content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.folders-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.folder-item {
+  text-align: center;
+  cursor: pointer;
+}
+
+.folder-image {
+  width: 80px;
+  height: 80px;
+}
+
+.folder-item span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.folder-item:active .folder-image {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
