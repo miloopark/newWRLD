@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Draggable from 'react-draggable';
-import { ResizableBox } from 'react-resizable';
+import { ResizableBox } from 'react-resizable'; // Ensure this is imported
 import FinderNav from './FinderNav';
 import { useNavigate, useLocation, Routes, Route } from 'react-router-dom';
 import Recents from '../pages/Recents';
@@ -28,7 +28,7 @@ const Finder: React.FC<FinderProps> = ({ id, currentFolder, closeWindow, updateW
       navigate('/recents');
     }
   }, [location, navigate]);
-  
+
   useEffect(() => {
     // Update window state when route changes
     updateWindowState(id, location.pathname);
