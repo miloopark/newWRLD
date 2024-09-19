@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import Folder from '../../../public/assets/folder.png'
 import './Art.css';
 
 const Art: React.FC = () => {
@@ -55,7 +56,7 @@ const Art: React.FC = () => {
         <div className="folders-grid">
           {folders.map((folder) => (
             <div key={folder.path} className="folder-item" onClick={() => handleFolderClick(folder.label)}>
-              <img src="/public/assets/folder.png" alt={folder.label} className="folder-image" />
+              <img src={Folder} alt={folder.label} className="folder-image" />
               <span>{folder.label}</span>
             </div>
           ))}
