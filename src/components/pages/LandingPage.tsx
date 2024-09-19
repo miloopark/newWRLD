@@ -21,7 +21,6 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="landing-page">
-      <video ref={videoRef} src="/src/assets/paper.mp4" autoPlay muted className="background-video" />
     </div>
   );
 };

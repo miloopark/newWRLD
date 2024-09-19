@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Folder from '../../../public/assets/folder.png'
 import './Recents.css';
 
 const Recents: React.FC = () => {
@@ -18,7 +19,7 @@ const Recents: React.FC = () => {
       <div className="folders-grid">
         {folders.map((folder) => (
           <div key={folder.path} className="folder-item" onClick={() => navigate(folder.path)}>
-            <img src="/public/assets/folder.png" alt={folder.label} className="folder-image" />
+            <img src={Folder} alt={folder.label} className="folder-image" />
             <span>{folder.label}</span>
           </div>
         ))}

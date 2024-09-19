@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/pages/LandingPage';
 import Finder from './components/Finder/Finder';
 import ErrorModal from './components/error/ErrorModal';
+import Video from '../public/assets/background-video.mp4';
+import Wrapper from '../public/assets/wrappingborder.png';
+import FinderIcon from '../public/assets/finder-icon.png'
 import './App.css';
 
 interface WindowState {
@@ -36,10 +39,10 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <video src="/public/assets/background-video.mp4" autoPlay loop muted className="background-video" />
-      <img src="/public/assets/wrappingborder.png" className="wrapping-border"/>
+      <video src={Video} autoPlay loop muted className="background-video" />
+      <img src={Wrapper} className="wrapping-border"/>
       <div className="finder-icon" onDoubleClick={openNewFinderWindow}>
-        <img src="/public/assets/finder-icon.png" alt="Finder Icon" />
+        <img src={FinderIcon} alt="Finder Icon" />
       </div>
       {windows.map(window => (
         <Finder

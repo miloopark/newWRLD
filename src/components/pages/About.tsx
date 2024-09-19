@@ -1,4 +1,5 @@
 import React from 'react';
+import Me from "../../../public/assets/me.jpg"
 import './About.css';
 
 const About: React.FC = () => {
@@ -12,7 +13,7 @@ const About: React.FC = () => {
           to create my own creative agency.
           
         </p>
-        <img src="/public/assets/me.jpg" className="about-image" alt="Milo" />
+        <img src={Me} className="about-image" alt="Milo" />
       </div>
       <p>
           I enjoy creative pursuits like sound engineering, music production,
