@@ -14,12 +14,12 @@ const Art: React.FC = () => {
   ];
 
   const graphicDesignImages = [
-    { src: '/src/assets/pic1.png', subtitle: 'Graphic Design Pic 1' },
-    { src: '/src/assets/pic2.png', subtitle: 'Graphic Design Pic 2' },
-    { src: '/src/assets/pic3.png', subtitle: 'Graphic Design Pic 3' },
-    { src: '/src/assets/pic4.png', subtitle: 'Graphic Design Pic 4' },
-    { src: '/src/assets/pic5.png', subtitle: 'Graphic Design Pic 5' },
-    { src: '/src/assets/pic6.png', subtitle: 'Graphic Design Pic 6' },
+    { src: '/public/assets/pic1.png', subtitle: 'Graphic Design Pic 1' },
+    { src: '/public/assets/pic2.png', subtitle: 'Graphic Design Pic 2' },
+    { src: '/public/assets/pic3.png', subtitle: 'Graphic Design Pic 3' },
+    { src: '/public/assets/pic4.png', subtitle: 'Graphic Design Pic 4' },
+    { src: '/public/assets/pic5.png', subtitle: 'Graphic Design Pic 5' },
+    { src: '/public/assets/pic6.png', subtitle: 'Graphic Design Pic 6' },
   ];
 
   const handleFolderClick = (label: string) => {
@@ -55,7 +55,7 @@ const Art: React.FC = () => {
         <div className="folders-grid">
           {folders.map((folder) => (
             <div key={folder.path} className="folder-item" onClick={() => handleFolderClick(folder.label)}>
-              <img src="/src/assets/folder.png" alt={folder.label} className="folder-image" />
+              <img src="/public/assets/folder.png" alt={folder.label} className="folder-image" />
               <span>{folder.label}</span>
             </div>
           ))}

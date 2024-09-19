@@ -18,7 +18,7 @@ const Recents: React.FC = () => {
       <div className="folders-grid">
         {folders.map((folder) => (
           <div key={folder.path} className="folder-item" onClick={() => navigate(folder.path)}>
-            <img src="/src/assets/folder.png" alt={folder.label} className="folder-image" />
+            <img src="/public/assets/folder.png" alt={folder.label} className="folder-image" />
             <span>{folder.label}</span>
           </div>
         ))}

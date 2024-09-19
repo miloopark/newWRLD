@@ -12,7 +12,7 @@ const About: React.FC = () => {
           to create my own creative agency.
           
         </p>
-        <img src="/src/assets/me.jpg" className="about-image" alt="Milo" />
+        <img src="/public/assets/me.jpg" className="about-image" alt="Milo" />
       </div>
       <p>
           I enjoy creative pursuits like sound engineering, music production,

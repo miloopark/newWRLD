@@ -36,10 +36,10 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <video src="/src/assets/background-video.mp4" autoPlay loop muted className="background-video" />
-      <img src="/src/assets/wrappingborder.png" className="wrapping-border"/>
+      <video src="/public/assets/background-video.mp4" autoPlay loop muted className="background-video" />
+      <img src="/public/assets/wrappingborder.png" className="wrapping-border"/>
       <div className="finder-icon" onDoubleClick={openNewFinderWindow}>
-        <img src="/src/assets/finder-icon.png" alt="Finder Icon" />
+        <img src="/public/assets/finder-icon.png" alt="Finder Icon" />
       </div>
       {windows.map(window => (
         <Finder

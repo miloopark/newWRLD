@@ -16,7 +16,7 @@ const FolderIcon: React.FC<FolderIconProps> = ({ label, path }) => {
 
   return (
     <div className="folder-icon" onClick={handleClick}>
-      <img src="/src/assets/folder.png" alt={label} />
+      <img src="/public/assets/folder.png" alt={label} />
       <span>{label}</span>
     </div>
   );
