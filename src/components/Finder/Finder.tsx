@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Draggable from 'react-draggable';
-import { ResizableBox } from 'react-resizable';
 import FinderNav from './FinderNav';
 import { useNavigate, useLocation, Routes, Route } from 'react-router-dom';
 import Recents from '../pages/Recents';

@@ -1,5 +1,4 @@
-import React from 'react';
-import './Work.css'; // Updated CSS file for unified styling
+import './Work.css'; 
 
 const Work: React.FC = () => {
   const internships = [
