@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Draggable from 'react-draggable';
-import { ResizableBox } from 'react-resizable'; // Ensure this is imported
 import FinderNav from './FinderNav';
 import { useNavigate, useLocation, Routes, Route } from 'react-router-dom';
 import Recents from '../pages/Recents';
@@ -48,15 +47,8 @@ const Finder: React.FC<FinderProps> = ({ id, currentFolder, closeWindow, updateW
   ];
 
   return (
-    <Draggable handle=".finder-header" cancel=".react-resizable-handle">
-      <ResizableBox
-        width={800}
-        height={600}
-        minConstraints={[300, 200]}
-        maxConstraints={[window.innerWidth, window.innerHeight]}
-        className="finder-window"
-        resizeHandles={['se']}
-      >
+    <Draggable handle=".finder-header" cancel=".finder-controls">
+      <div className="finder-window" style={{ width: '800px', height: '600px' }}>
         <div className="finder-header">
           <div className="finder-controls">
             <div className="control-button close" onClick={() => closeWindow(id)}></div>
@@ -68,7 +60,7 @@ const Finder: React.FC<FinderProps> = ({ id, currentFolder, closeWindow, updateW
         <div className="finder-body">
           <div className="finder-sidebar">
             <ul>
-              {folders.map(folder => (
+              {folders.map((folder) => (
                 <li
                   key={folder.path}
                   onClick={() => handleFolderClick(folder.path)}
@@ -90,7 +82,7 @@ const Finder: React.FC<FinderProps> = ({ id, currentFolder, closeWindow, updateW
             </Routes>
           </div>
         </div>
-      </ResizableBox>
+      </div>
     </Draggable>
   );
 };
