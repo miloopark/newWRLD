@@ -10,7 +10,6 @@ const Recents: React.FC = () => {
     { label: 'About', path: '/about' },
     { label: 'Art', path: '/art' },
     { label: 'Contact', path: '/contact' },
-    { label: 'Dorian', path: '/dorian' },
     { label: 'Work', path: '/work' },
   ];
 

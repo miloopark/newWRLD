@@ -6,25 +6,23 @@ const About: React.FC = () => {
   return (
     <div className="about-content">
       <h2>About Me</h2>
-      <div className="about-intro">
-        <p>
-          Hey! I'm Milo [Min Sung], a senior at Boston University, majoring in Computer Science and Mathematics. I'm passionate
-          about development and love the idea that you can create anything if you put your mind to it. Someday, I wish
-          to create my own creative agency.
-          
-        </p>
-        <img src={Me} className="about-image" alt="Milo" />
-      </div>
+      <img src={Me} className="about-image" alt="Milo" />
       <p>
-          I enjoy creative pursuits like sound engineering, music production,
-          and video editing. I love physical activities such as golf, soccer, basketball, swimming, etc.
-          In my downtime, I'm either reading, at the driving range, or playing poker with my friends.
+        Hey! I'm Milo (Min Sung Park). I recently graduated from Boston University with a degree in Computer Science, 
+        and I’m passionate about building software that’s creative, impactful, and people-centered. 
+        Right now, I’m balancing two paths: growing my own startup and exploring software engineering opportunities where I can contribute and learn from a strong team.
       </p>
       <p>
-          I started programming Java when I was 16 for an AP course. I started Python when I was 18 for an intro CS course
-          freshman year of college. Since then, I've learned various languages and technologies, including 
-          JavaScript, TypeScript, HTML/CSS, SQL, and C/C++. I've also worked extensively with frameworks and libraries such as 
-          React, React Native, Node.js, Express, Flask, Pandas, NumPy, Mongoose, and more.
+        On the entrepreneurial side, I’m building <strong>Up Games</strong>, a startup focused on creating engaging social and mobile experiences. 
+        It’s been a way for me to apply full-stack development, product design, and rapid iteration — while also teaching me a lot about the realities of shipping and scaling products. 
+      </p>
+      <p>
+        At the same time, I’m excited to join a collaborative team as a Software Engineer. I’m looking for opportunities to deepen my skills in 
+        frontend (React, Next.js, TypeScript), backend (Node.js, Python), and data-driven applications, while contributing to meaningful projects.
+      </p>
+      <p>
+        Beyond code, I’m a creative at heart — I DJ, produce music, and design visuals — and I believe creativity fuels my engineering. 
+        I also love staying active: golf, basketball, swimming, and late-night poker hands with friends. 
       </p>
     </div>
   );

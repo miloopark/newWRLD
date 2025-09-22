@@ -6,7 +6,6 @@ import Recents from '../pages/Recents';
 import About from '../pages/About';
 import Art from '../pages/Art';
 import Contact from '../pages/Contact';
-import Dorian from '../pages/Dorian';
 import Work from '../pages/Work';
 import './Finder.css';
 
@@ -42,7 +41,6 @@ const Finder: React.FC<FinderProps> = ({ id, currentFolder, closeWindow, updateW
     { label: 'About', path: '/about' },
     { label: 'Art', path: '/art' },
     { label: 'Contact', path: '/contact' },
-    { label: 'Dorian', path: '/dorian' },
     { label: 'Work', path: '/work' },
   ];
 
@@ -77,7 +75,6 @@ const Finder: React.FC<FinderProps> = ({ id, currentFolder, closeWindow, updateW
               <Route path="/about" element={<About />} />
               <Route path="/art" element={<Art />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/dorian" element={<Dorian />} />
               <Route path="/work" element={<Work />} />
             </Routes>
           </div>
