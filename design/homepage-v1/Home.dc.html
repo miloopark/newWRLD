@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Milo Park — Index</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#fafaf8}
+a{color:#0c0c0c}a:hover{color:#0c0c0c}
+*{box-sizing:border-box}
+.mp{font-family:'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;color:#0c0c0c;font-variant-numeric:tabular-nums}
+.ul{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.nav a{text-decoration:none}.nav a:hover,.nav a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:1px solid #0c0c0c;outline-offset:3px}
+.ln{overflow:hidden;border-bottom:1px solid #d7d7d2}
+.ln span{display:inline-block;animation:rise 1.1s cubic-bezier(.16,.84,.2,1) both}
+@keyframes rise{from{transform:translateY(105%)}to{transform:translateY(0)}}
+.row{display:grid;grid-template-columns:72px minmax(0,1.6fr) minmax(0,1.2fr) 110px 70px;gap:16px;align-items:baseline;padding:14px 0 12px;border-bottom:1px solid #d7d7d2;text-decoration:none;font-size:14px;line-height:1.3;transition:border-color .3s}
+.row .rt{display:inline-block;transition:transform .45s cubic-bezier(.16,.84,.2,1)}
+.row .ar{opacity:0;transition:opacity .3s, transform .45s cubic-bezier(.16,.84,.2,1);transform:translateX(-8px);display:inline-block}
+.row:hover,.row:focus-visible{border-bottom-color:#0c0c0c;outline:none}
+.row:hover .rt,.row:focus-visible .rt{transform:translateX(14px)}
+.row:hover .ar,.row:focus-visible .ar{opacity:1;transform:translateX(0)}
+.sub{color:#6a6a66}
+.hd{display:grid;grid-template-columns:72px minmax(0,1.6fr) minmax(0,1.2fr) 110px 70px;gap:16px;font-size:12px;color:#6a6a66;padding-bottom:10px;border-bottom:1px solid #0c0c0c}
+@media (max-width:760px){.row,.hd{grid-template-columns:40px minmax(0,1fr) 64px}.c-tech,.c-cat{display:none}}
+.fb{font:inherit;font-size:13px;background:none;border:0;padding:6px 0;cursor:pointer;color:#6a6a66;min-height:44px}
+.fb[aria-pressed="true"]{color:#0c0c0c;text-decoration:underline;text-underline-offset:4px}
+.fb:hover{color:#0c0c0c}
+.pv{position:absolute;width:240px;height:300px;pointer-events:none;z-index:5;transition:opacity .25s, transform .5s cubic-bezier(.16,.84,.2,1);overflow:hidden;background:#0c0c0c}
+@media (hover:none){.pv{display:none}}
+.art{position:absolute;inset:0;overflow:hidden;background:#0c0c0c}
+.art-a{background:repeating-radial-gradient(circle at 50% 50%,#0c0c0c 0 5px,#e9e9e4 5px 6px)}
+.art-a::after{content:"";position:absolute;left:38%;top:38%;width:24%;height:24%;border-radius:50%;background:#fafaf8}
+.art-b::before{content:"";position:absolute;left:18%;top:12%;width:56%;height:44%;border-radius:50%;background:radial-gradient(circle,#efefea 0%,#77776f 42%,transparent 70%);filter:blur(5px)}
+.art-b::after{content:"";position:absolute;left:34%;top:11%;width:56%;height:44%;border-radius:50%;background:radial-gradient(circle,#efefea 0%,transparent 64%);filter:blur(18px);opacity:.55;box-shadow:-60px 220px 60px 30px #2a2a28}
+.art-c{background:#efefea repeating-linear-gradient(90deg,#0c0c0c 0 1px,transparent 1px 12px)}
+.art-c::after{content:"";position:absolute;left:12%;top:54%;width:62%;height:30%;background:#0c0c0c}
+.art-d::after{content:attr(data-l);position:absolute;left:-4%;bottom:-14%;font-family:'Inter Tight',Arial,sans-serif;font-weight:500;font-size:230px;letter-spacing:-.08em;line-height:1;color:#fafaf8}
+.grain{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:overlay;opacity:.7}
+.arw{position:absolute;right:62%;top:4%;width:min(78%,360px)}
+@media (max-width:760px){.arw{right:auto;left:-6%;top:auto;bottom:100%;width:86%;transform:rotate(8deg)}.hp{margin-top:140px}}
+.draw{stroke-dasharray:900;stroke-dashoffset:0;animation:draw 1.8s cubic-bezier(.65,0,.35,1) .3s both}
+@keyframes draw{from{stroke-dashoffset:900}to{stroke-dashoffset:0}}
+.head,.say{animation:fade .6s ease 1.6s both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.wk{border-bottom:1px solid #d7d7d2}
+.wk summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,1.6fr) 44px;gap:16px;align-items:baseline;padding:22px 0 20px}
+.wk summary::-webkit-details-marker{display:none}
+.wk .pl{justify-self:end;font-size:22px;line-height:1;transition:transform .4s cubic-bezier(.16,.84,.2,1)}
+.wk[open] .pl{transform:rotate(45deg)}
+.wk summary:hover .co{transform:translateX(10px)}
+.wk .co{display:inline-block;transition:transform .45s cubic-bezier(.16,.84,.2,1)}
+@media (max-width:760px){.wk summary{grid-template-columns:minmax(0,1fr) 44px}.wk .dt,.wk .rl{grid-column:1}.wk .pl{grid-row:1;grid-column:2}}
+.cv{position:relative;aspect-ratio:1/1;overflow:hidden;background:#0c0c0c}
+.cv .art{transition:transform 1.2s cubic-bezier(.16,.84,.2,1), filter .6s}
+.cv:hover .art{transform:scale(1.05)}
+.lk{text-decoration:none;font-size:13px}.lk:hover,.lk:focus-visible{text-decoration:underline;text-underline-offset:3px}
+.big a{text-decoration:none}.big a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:10px}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}html{scroll-behavior:auto}}
+</style>
+</helmet>
+<div id="top" class="mp" style="background:#fafaf8;min-height:100%;width:100%">
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute"><filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
+
+  <div style="max-width: 1600px; margin: 0 auto; padding: 0 clamp(16px,2.2vw,32px); height: 4207px">
+
+    <!-- HEADER -->
+    <header class="nav" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr));gap:8px 16px;padding:16px 0;font-size:13px;line-height:1.3">
+      <div style="display:flex;gap:4px"><span>Milo Park,</span><a href="#index" class="ul">Index</a></div>
+      <nav aria-label="Primary" style="display:flex;gap:6px;flex-wrap:wrap">
+        <a href="#work">Work</a><span aria-hidden="true">/</span><a href="#index">Projects</a><span aria-hidden="true">/</span><a href="#music">Music</a>
+      </nav>
+      <div style="color:#6a6a66">Portfolio Vol. 01 — 2026</div>
+      <div style="display:flex;justify-content:space-between;gap:16px"><span>{{time}}</span><a href="#contact">Contact</a></div>
+    </header>
+
+    <!-- HERO -->
+    <section aria-labelledby="hero-h" style="position:relative;min-height:clamp(620px,58vw,880px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(32px,4vw,64px) 0 clamp(56px,5vw,80px);border-top:1px solid #d7d7d2">
+      <h1 id="hero-h" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Hi, I'm Milo Park — iOS developer, designer and music maker</h1>
+      <div class="hp" style="position:relative;width:clamp(240px,28vw,420px)">
+        <svg class="arw" viewBox="0 0 400 300" aria-hidden="true" style="overflow:visible">
+          <path id="arwp" class="draw" d="M 14 96 C 70 18, 196 14, 214 104 C 226 168, 146 194, 152 142 C 158 92, 262 116, 302 168 S 362 214, 390 213" fill="none" stroke="#0c0c0c" stroke-width="1.4" stroke-linecap="round"></path>
+          <path class="head" d="M 375 202 L 391 213 L 374 225" fill="none" stroke="#0c0c0c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          <text class="say" style="font-family:'Inter Tight',Arial,sans-serif;font-weight:500;font-size:30px;letter-spacing:-1.4px;fill:#0c0c0c"><textPath href="#arwp" startOffset="3%" dy="-10">Hi, I'm Milo</textPath></text>
+        </svg>
+        <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#0c0c0c">
+          <div class="art art-b"></div>
+          <svg class="grain" aria-hidden="true"><rect width="100%" height="100%" filter="url(#gr)"></rect></svg>
+          <span style="position:absolute;left:12px;top:10px;font-size:11px;color:#fafaf8">[Your photo]</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;gap:12px;padding-top:8px;font-size:11px;color:#6a6a66"><span>Milo Park</span><span>iOS · Design · Sound</span></div>
+      </div>
+      <a href="#index" style="position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font-size:13px;text-decoration:none">(Scroll) ↓</a>
+    </section>
+
+    <!-- INDEX -->
+    <section id="index" aria-labelledby="idx-h" style="padding-top:clamp(40px,5vw,72px)">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;border-bottom:1px solid #d7d7d2;padding-bottom:8px">
+        <h2 id="idx-h" style="margin:0;font-weight:500;font-size:clamp(40px,6.4vw,104px);line-height:.9;letter-spacing:-.06em">Archive<br>Index <span style="font-size:.3em;letter-spacing:0;vertical-align:top;color:#6a6a66">({{count}})</span></h2>
+        <div role="group" aria-label="Filter archive" style="display:flex;gap:18px;flex-wrap:wrap">
+          <sc-for list="{{filters}}" as="f" hint-placeholder-count="4">
+            <button type="button" class="fb" aria-pressed="{{f.on}}" onClick="{{f.pick}}">{{f.label}}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div onMouseMove="{{track}}" style="position:relative;padding-top:28px">
+        <div class="hd" aria-hidden="true"><span>Number:</span><span>Entry:</span><span class="c-tech">Detail:</span><span class="c-cat">Category:</span><span>Year:</span></div>
+        <sc-for list="{{items}}" as="it" hint-placeholder-count="12">
+          <a href="{{it.href}}" class="row" onMouseEnter="{{it.enter}}" onMouseLeave="{{unhover}}" onFocus="{{it.enter}}" onBlur="{{unhover}}">
+            <span>{{it.n}}</span>
+            <span><span class="rt">{{it.t}} <span class="sub">/ {{it.s}}</span></span> <span class="ar" aria-hidden="true">→</span></span>
+            <span class="c-tech sub">{{it.tech}}</span>
+            <span class="c-cat">{{it.cat}}</span>
+            <span>{{it.yr}}</span>
+          </a>
+        </sc-for>
+        <div class="pv" aria-hidden="true" style="left: {{px}}px; top: {{py}}px; opacity: {{pvOp}}; transform: translate(-30%,-55%) rotate({{pvRot}}deg) scale({{pvScale}})">
+          <div class="art {{pvArt}}" data-l="{{pvN}}"></div>
+          <svg class="grain" aria-hidden="true"><rect width="100%" height="100%" filter="url(#gr)"></rect></svg>
+          <div style="position:absolute;left:10px;right:10px;bottom:8px;display:flex;justify-content:space-between;font-size:11px;color:#fafaf8;mix-blend-mode:difference"><span>{{pvN}}</span><span>{{pvCat}}</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" aria-labelledby="wk-h" style="padding-top:clamp(96px,10vw,160px)">
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;border-bottom:1px solid #0c0c0c;padding-bottom:12px">
+        <h2 id="wk-h" style="margin:0;font-weight:500;font-size:clamp(40px,6.4vw,104px);line-height:.9;letter-spacing:-.06em"><span style="font-size:.3em;letter-spacing:0;vertical-align:top;color:#6a6a66">(01)</span> Work<br>Experience</h2>
+        <p style="margin:0;max-width:300px;font-size:13px;line-height:1.45;color:#6a6a66">Roles, in reverse order. Open a row for the detail.</p>
+      </div>
+      <details class="wk">
+        <summary><span class="dt" style="font-size:13px;color:#6a6a66">[2025 — Present]</span><span style="font-size:clamp(22px,2.4vw,36px);letter-spacing:-.04em;font-weight:500"><span class="co">Loopy</span></span><span class="rl" style="font-size:14px">Founder, iOS Developer &amp; Designer</span><span class="pl" aria-hidden="true">+</span></summary>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px;padding:0 0 28px;font-size:14px;line-height:1.5">
+          <p style="margin:0;color:#6a6a66">SwiftUI · Firestore · Cloud Functions</p>
+          <p style="margin:0">Designing and building a social party-games app solo — product, interface, backend and release. [Add outcomes: users, launches, numbers.]</p>
+          <a href="#index" class="lk">View project →</a>
+        </div>
+      </details>
+      <details class="wk">
+        <summary><span class="dt" style="font-size:13px;color:#6a6a66">[Month 2024 — Month 2025]</span><span style="font-size:clamp(22px,2.4vw,36px);letter-spacing:-.04em;font-weight:500"><span class="co">[Company Name]</span></span><span class="rl" style="font-size:14px">[Role title]</span><span class="pl" aria-hidden="true">+</span></summary>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px;padding:0 0 28px;font-size:14px;line-height:1.5">
+          <p style="margin:0;color:#6a6a66">[Stack]</p>
+          <p style="margin:0">[Two or three lines on what you shipped and what changed because of it.]</p>
+          <a href="#" class="lk">[Company site ↗]</a>
+        </div>
+      </details>
+      <details class="wk">
+        <summary><span class="dt" style="font-size:13px;color:#6a6a66">[Month 2023 — Month 2024]</span><span style="font-size:clamp(22px,2.4vw,36px);letter-spacing:-.04em;font-weight:500"><span class="co">[Company Name]</span></span><span class="rl" style="font-size:14px">[Role title]</span><span class="pl" aria-hidden="true">+</span></summary>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px;padding:0 0 28px;font-size:14px;line-height:1.5">
+          <p style="margin:0;color:#6a6a66">[Stack]</p>
+          <p style="margin:0">[Two or three lines on what you shipped and what changed because of it.]</p>
+          <a href="#" class="lk">[Company site ↗]</a>
+        </div>
+      </details>
+      <details class="wk">
+        <summary><span class="dt" style="font-size:13px;color:#6a6a66">[Year]</span><span style="font-size:clamp(22px,2.4vw,36px);letter-spacing:-.04em;font-weight:500"><span class="co">Freelance</span></span><span class="rl" style="font-size:14px">iOS Development &amp; Design</span><span class="pl" aria-hidden="true">+</span></summary>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px;padding:0 0 28px;font-size:14px;line-height:1.5">
+          <p style="margin:0;color:#6a6a66">Swift · SwiftUI · Figma</p>
+          <p style="margin:0">[Clients and outcomes.]</p>
+          <span></span>
+        </div>
+      </details>
+    </section>
+
+    <!-- MUSIC -->
+    <section id="music" aria-labelledby="mu-h" style="padding-top:clamp(96px,10vw,160px)">
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;border-bottom:1px solid #0c0c0c;padding-bottom:12px">
+        <h2 id="mu-h" style="margin:0;font-weight:500;font-size:clamp(40px,6.4vw,104px);line-height:.9;letter-spacing:-.06em"><span style="font-size:.3em;letter-spacing:0;vertical-align:top;color:#6a6a66">(03)</span> Sound<br>Archive</h2>
+        <p style="margin:0;max-width:300px;font-size:13px;line-height:1.45;color:#6a6a66">Singles, mixes and unfinished things. Made at night.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:clamp(16px,2vw,28px);padding-top:28px">
+        <sc-for list="{{music}}" as="m" hint-placeholder-count="4">
+          <article style="display:flex;flex-direction:column;gap:10px">
+            <div class="cv"><div class="art {{m.art}}" data-l="{{m.n}}"></div><svg class="grain" aria-hidden="true"><rect width="100%" height="100%" filter="url(#gr)"></rect></svg></div>
+            <div style="display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#6a6a66;border-top:1px solid #d7d7d2;padding-top:8px"><span>{{m.n}} — {{m.type}}</span><span>{{m.len}}</span></div>
+            <h3 style="margin:0;font-weight:500;font-size:24px;letter-spacing:-.04em;line-height:1">{{m.t}}</h3>
+            <div style="display:flex;gap:16px;flex-wrap:wrap"><a href="#" class="lk">SoundCloud ↗</a><a href="#" class="lk">Spotify ↗</a></div>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="ct-h" style="padding-top:clamp(120px,12vw,200px)">
+      <div style="border-top:1px solid #0c0c0c;padding-top:12px;display:flex;justify-content:space-between;font-size:13px;color:#6a6a66"><span>(04) Contact</span><span>Replies within a few days</span></div>
+      <h2 id="ct-h" style="margin:0;padding-top:clamp(24px,3vw,40px);font-weight:500;font-size:clamp(60px,13.5vw,220px);line-height:.84;letter-spacing:-.07em">
+        <div class="ln" style="padding-left:0">Let's make</div>
+        <div class="ln" style="padding-left:22%">something</div>
+        <div class="ln" style="padding-left:8%">strange.</div>
+      </h2>
+      <div class="big" style="padding-top:clamp(32px,4vw,56px);font-weight:500;font-size:clamp(26px,4.4vw,72px);letter-spacing:-.05em;line-height:1">
+        <a href="mailto:hello@example.com">[hello@yourdomain.com]</a>
+      </div>
+      <nav aria-label="Social" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:0 16px;margin-top:clamp(40px,5vw,72px);border-top:1px solid #d7d7d2">
+        <a href="#" class="lk" style="padding:14px 0;border-bottom:1px solid #d7d7d2;display:flex;justify-content:space-between"><span>GitHub</span><span aria-hidden="true">↗</span></a>
+        <a href="#" class="lk" style="padding:14px 0;border-bottom:1px solid #d7d7d2;display:flex;justify-content:space-between"><span>LinkedIn</span><span aria-hidden="true">↗</span></a>
+        <a href="#" class="lk" style="padding:14px 0;border-bottom:1px solid #d7d7d2;display:flex;justify-content:space-between"><span>SoundCloud</span><span aria-hidden="true">↗</span></a>
+        <a href="#" class="lk" style="padding:14px 0;border-bottom:1px solid #d7d7d2;display:flex;justify-content:space-between"><span>Instagram</span><span aria-hidden="true">↗</span></a>
+      </nav>
+    </section>
+
+    <footer style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:56px 0 24px;font-size:12px;color:#6a6a66">
+      <span>© 2026 Milo Park</span><span>Set in Inter Tight</span><a href="#top" class="lk" style="color:#0c0c0c">Back to top ↑</a>
+    </footer>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4100}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { filter: 'All', hover: null, mx: 0, my: 0, time: '' };
+  }
+  componentDidMount() {
+    const tick = () => {
+      let t = '';
+      try { t = new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' }); } catch (e) { t = ''; }
+      this.setState({ time: 'EST ' + t });
+    };
+    tick();
+    this.timer = setInterval(tick, 20000);
+  }
+  componentWillUnmount() { clearInterval(this.timer); }
+  renderVals() {
+    const ITEMS = [
+      { n: '01', t: 'Loopy', s: 'Social party games for iOS', tech: 'SwiftUI · Firestore · Cloud Functions', cat: 'Project', yr: '2026', art: 'art-d', href: '#work' },
+      { n: '02', t: '[Company Name]', s: '[Role title]', tech: '[Stack]', cat: 'Work', yr: '[2025]', art: 'art-c', href: '#work' },
+      { n: '03', t: '[Untitled 03]', s: 'Single', tech: '3:41 · Ableton', cat: 'Music', yr: '2026', art: 'art-a', href: '#music' },
+      { n: '04', t: '[Data Pipeline]', s: 'Batch ETL and warehouse', tech: '[Python · SQL · Airflow]', cat: 'Project', yr: '2026', art: 'art-c', href: '#index' },
+      { n: '05', t: '[Company Name]', s: '[Role title]', tech: '[Stack]', cat: 'Work', yr: '[2024]', art: 'art-b', href: '#work' },
+      { n: '06', t: '[Night Mix 01]', s: '60-minute mix', tech: '58:12', cat: 'Music', yr: '2025', art: 'art-b', href: '#music' },
+      { n: '07', t: 'Portfolio Vol. 01', s: 'This site', tech: 'React · GSAP · Three.js', cat: 'Project', yr: '2026', art: 'art-d', href: '#top' },
+      { n: '08', t: '[Project Name]', s: '[One-line description]', tech: '[Swift · Firebase]', cat: 'Project', yr: '[2025]', art: 'art-b', href: '#index' },
+      { n: '09', t: 'Freelance', s: 'iOS development and design', tech: 'Swift · SwiftUI · Figma', cat: 'Work', yr: '[Year]', art: 'art-d', href: '#work' },
+      { n: '10', t: '[EP Title]', s: 'Four-track EP', tech: '14:20', cat: 'Music', yr: '2025', art: 'art-a', href: '#music' },
+      { n: '11', t: '[Project Name]', s: '[One-line description]', tech: '[Stack]', cat: 'Project', yr: '[2024]', art: 'art-c', href: '#index' },
+      { n: '12', t: '[Untitled 12]', s: 'Single', tech: '2:58', cat: 'Music', yr: '2024', art: 'art-b', href: '#music' }
+    ];
+    const f = this.state.filter;
+    const shown = ITEMS.filter((x) => f === 'All' || x.cat === f);
+    const items = shown.map((x) => ({ ...x, enter: () => this.setState({ hover: x.n }) }));
+    const cats = [['All', 'All'], ['Project', 'Projects'], ['Work', 'Work'], ['Music', 'Music']];
+    const filters = cats.map(([k, label]) => ({
+      label: label + ' (' + (k === 'All' ? ITEMS.length : ITEMS.filter((x) => x.cat === k).length) + ')',
+      on: f === k ? 'true' : 'false',
+      pick: () => this.setState({ filter: k, hover: null })
+    }));
+    const h = ITEMS.find((x) => x.n === this.state.hover);
+    const music = [
+      { n: 'M01', t: '[Untitled 03]', type: 'Single', len: '3:41', art: 'art-a' },
+      { n: 'M02', t: '[Night Mix 01]', type: 'Mix', len: '58:12', art: 'art-b' },
+      { n: 'M03', t: '[EP Title]', type: 'EP', len: '4 tracks', art: 'art-d' },
+      { n: 'M04', t: '[Untitled 12]', type: 'Single', len: '2:58', art: 'art-c' }
+    ];
+    return {
+      time: this.state.time,
+      items, filters, count: shown.length, music,
+      unhover: () => this.setState({ hover: null }),
+      track: (e) => { const r = e.currentTarget.getBoundingClientRect(); this.setState({ mx: e.clientX - r.left, my: e.clientY - r.top }); },
+      px: Math.round(this.state.mx), py: Math.round(this.state.my),
+      pvOp: h ? 1 : 0,
+      pvScale: h ? 1 : 0.92,
+      pvRot: h ? (parseInt(h.n, 10) % 2 ? -3 : 3) : 0,
+      pvArt: h ? h.art : 'art-d',
+      pvN: h ? h.n : '',
+      pvCat: h ? h.cat : ''
+    };
+  }
+}
+</script>
+</body>
+</html>
