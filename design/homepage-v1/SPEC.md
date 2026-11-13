@@ -38,9 +38,11 @@ ScrollSmoother) for smooth scroll. No Three.js on the homepage for now — the
    text fade in. On phones the arrow sits above the photo. Small caption under
    the photo; `(Scroll) ↓` at the bottom. The H1 is visually hidden
    ("Hi, I'm Milo Park — iOS developer, designer and music maker").
-   - Portrait: `public/assets/me.jpg` already exists in the repo (2048×1363
-     landscape) — crop to 4:5, black and white. Confirm with Milo before
-     using it.
+   - Portrait: `public/assets/portrait.jpg` (819×1024, already cropped to
+     4:5 from Milo's rooftop DJ film photo). Display it in black and white
+     with CSS: `filter: grayscale(1) contrast(1.12) brightness(1.02)`,
+     `object-fit: cover; object-position: 50% 40%`, with a light film-grain
+     overlay. Alt text is in `Home.dc.html`. (Do not use `me.jpg`.)
 3. **Archive Index** — numbered list of 12 entries (Projects / Work / Music),
    filter buttons `All / Projects / Work / Music` with counts
    (`aria-pressed`). Columns: Number / Entry / Detail / Category / Year
