@@ -1,0 +1,16 @@
+/*
+ * Tailwind v4, imported WITHOUT preflight: the existing Finder site relies on
+ * browser default styles, and the homepage design sets every property
+ * explicitly, so the reset is omitted on purpose.
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  --color-ground: #fafaf8;
+  --color-ink: #0c0c0c;
+  --color-rule: #d7d7d2;
+  --color-sub: #6a6a66;
+  --font-tight: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

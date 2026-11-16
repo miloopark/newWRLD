@@ -1,0 +1,340 @@
+/*
+ * Homepage v1 — Swiss editorial (from design/homepage-v1/Home.dc.html).
+ * Only what Tailwind utilities can't express: procedural artwork,
+ * grain, and multi-element hover choreography. Everything is scoped
+ * under .mp so nothing leaks into the Finder site.
+ */
+
+.mp {
+  font-family: var(--font-tight);
+  color: #0c0c0c;
+  font-variant-numeric: tabular-nums;
+}
+.mp *,
+.mp *::before,
+.mp *::after {
+  box-sizing: border-box;
+}
+.mp :focus-visible {
+  outline: 1px solid #0c0c0c;
+  outline-offset: 3px;
+}
+.mp a {
+  color: #0c0c0c;
+}
+.mp h1,
+.mp h2,
+.mp h3,
+.mp p {
+  margin: 0;
+}
+
+/* Underlines and nav links */
+.mp .ul {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.mp .nav a {
+  text-decoration: none;
+}
+.mp .nav a:hover,
+.mp .nav a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.mp .lk {
+  text-decoration: none;
+  font-size: 13px;
+}
+.mp .lk:hover,
+.mp .lk:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.mp .big a {
+  text-decoration: none;
+}
+.mp .big a:hover,
+.mp .big a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+
+/* Contact heading line reveals (tweened by GSAP). The mask is only needed
+   while the text slides in; ln-open releases it afterwards so descenders
+   (the g in "something") paint over the rules instead of being clipped. */
+.mp .ln {
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid #d7d7d2;
+}
+.mp .ln > span {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.mp .ln.ln-open {
+  overflow: visible;
+}
+
+/* Archive index table */
+.mp .hd,
+.mp .row {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1.6fr) minmax(0, 1.2fr) 110px 70px;
+  gap: 16px;
+}
+.mp .hd {
+  font-size: 12px;
+  color: #6a6a66;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #0c0c0c;
+}
+.mp .row {
+  align-items: baseline;
+  padding: 14px 0 12px;
+  border-bottom: 1px solid #d7d7d2;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.3;
+  transition: border-color 0.3s;
+}
+.mp .row .rt {
+  display: inline-block;
+  transition: transform 0.45s cubic-bezier(0.16, 0.84, 0.2, 1);
+}
+.mp .row .ar {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s, transform 0.45s cubic-bezier(0.16, 0.84, 0.2, 1);
+}
+.mp .row:hover,
+.mp .row:focus-visible {
+  border-bottom-color: #0c0c0c;
+  outline: none;
+}
+.mp .row:hover .rt,
+.mp .row:focus-visible .rt {
+  transform: translateX(14px);
+}
+.mp .row:hover .ar,
+.mp .row:focus-visible .ar {
+  opacity: 1;
+  transform: translateX(0);
+}
+.mp .sub {
+  color: #6a6a66;
+}
+@media (max-width: 760px) {
+  .mp .row,
+  .mp .hd {
+    grid-template-columns: 40px minmax(0, 1fr) 64px;
+  }
+  .mp .c-tech,
+  .mp .c-cat {
+    display: none;
+  }
+}
+
+/* Filter buttons */
+.mp .fb {
+  font: inherit;
+  font-size: 13px;
+  background: none;
+  border: 0;
+  padding: 6px 0;
+  cursor: pointer;
+  color: #6a6a66;
+  min-height: 44px;
+}
+.mp .fb[aria-pressed='true'] {
+  color: #0c0c0c;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.mp .fb:hover {
+  color: #0c0c0c;
+}
+
+/* Cursor-following preview (positioned by GSAP; hidden on touch) */
+.mp .pv {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 300px;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+  background: #0c0c0c;
+  opacity: 0;
+  visibility: hidden;
+}
+@media (hover: none) {
+  .mp .pv {
+    display: none;
+  }
+}
+
+/* Procedural black & white artwork */
+.mp .art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #0c0c0c;
+}
+.mp .art-a {
+  background: repeating-radial-gradient(circle at 50% 50%, #0c0c0c 0 5px, #e9e9e4 5px 6px);
+}
+.mp .art-a::after {
+  content: '';
+  position: absolute;
+  left: 38%;
+  top: 38%;
+  width: 24%;
+  height: 24%;
+  border-radius: 50%;
+  background: #fafaf8;
+}
+.mp .art-b::before {
+  content: '';
+  position: absolute;
+  left: 18%;
+  top: 12%;
+  width: 56%;
+  height: 44%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #efefea 0%, #77776f 42%, transparent 70%);
+  filter: blur(5px);
+}
+.mp .art-b::after {
+  content: '';
+  position: absolute;
+  left: 34%;
+  top: 11%;
+  width: 56%;
+  height: 44%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #efefea 0%, transparent 64%);
+  filter: blur(18px);
+  opacity: 0.55;
+  box-shadow: -60px 220px 60px 30px #2a2a28;
+}
+.mp .art-c {
+  background: #efefea repeating-linear-gradient(90deg, #0c0c0c 0 1px, transparent 1px 12px);
+}
+.mp .art-c::after {
+  content: '';
+  position: absolute;
+  left: 12%;
+  top: 54%;
+  width: 62%;
+  height: 30%;
+  background: #0c0c0c;
+}
+.mp .art-d::after {
+  content: attr(data-l);
+  position: absolute;
+  left: -4%;
+  bottom: -14%;
+  font-family: var(--font-tight);
+  font-weight: 500;
+  font-size: 230px;
+  letter-spacing: -0.08em;
+  line-height: 1;
+  color: #fafaf8;
+}
+.mp .grain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+}
+
+/* Hero arrow — positioned and sized from JS so the tip always lands on the
+   photo's edge; z-index keeps the arrowhead visible on top of the photo. */
+.mp .arw {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  overflow: visible;
+}
+
+/* Work experience rows (native <details>) */
+.mp .wk {
+  border-bottom: 1px solid #d7d7d2;
+}
+.mp .wk summary {
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1.6fr) 44px;
+  gap: 16px;
+  align-items: baseline;
+  padding: 22px 0 20px;
+}
+.mp .wk summary::-webkit-details-marker {
+  display: none;
+}
+.mp .wk .pl {
+  justify-self: end;
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 0.4s cubic-bezier(0.16, 0.84, 0.2, 1);
+}
+.mp .wk[open] .pl {
+  transform: rotate(45deg);
+}
+.mp .wk .co {
+  display: inline-block;
+  transition: transform 0.45s cubic-bezier(0.16, 0.84, 0.2, 1);
+}
+.mp .wk summary:hover .co {
+  transform: translateX(10px);
+}
+@media (max-width: 760px) {
+  .mp .wk summary {
+    grid-template-columns: minmax(0, 1fr) 44px;
+  }
+  .mp .wk .dt,
+  .mp .wk .rl {
+    grid-column: 1;
+  }
+  .mp .wk .pl {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+/* Sound archive covers */
+.mp .cv {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #0c0c0c;
+}
+.mp .cv .art {
+  transition: transform 1.2s cubic-bezier(0.16, 0.84, 0.2, 1), filter 0.6s;
+}
+.mp .cv:hover .art {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mp *,
+  .mp *::before,
+  .mp *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  /* No reveal animation runs, so the mask never needs to exist. */
+  .mp .ln {
+    overflow: visible;
+  }
+}
