@@ -29,6 +29,7 @@ export const ARCHIVE_ITEMS: ArchiveItem[] = [
   { n: '10', t: '[EP Title]', s: 'Four-track EP', tech: '14:20', cat: 'Music', yr: '2025', art: 'art-a', href: '#music' },
   { n: '11', t: 'Neural Networks From Scratch', s: 'Feedforward net, visualized gradients', tech: 'Python · NumPy · Flask', cat: 'Project', yr: '[2025]', art: 'art-c', href: 'https://github.com/miloopark/Neural-Networks' },
   { n: '12', t: 'Logistic Regression Cluster Shifts', s: 'Coefficients under cluster separation', tech: 'Python · scikit-learn · Flask', cat: 'Project', yr: '[2025]', art: 'art-b', href: 'https://github.com/miloopark/Logistic-Regression-Cluster-Shifts-Analysis' },
+  { n: '13', t: 'Cuepoint', s: 'DJ mix analyzer — transitions, BPM, keys, energy', tech: 'Python · TypeScript · Audio fingerprinting', cat: 'Project', yr: '2026', art: 'art-a', href: 'https://github.com/miloopark/cuepoint' },
 ];
 
 export const FILTERS: { key: FilterKey; label: string }[] = [
